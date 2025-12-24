@@ -1,11 +1,41 @@
+# --- 1. Derleme (Build) Klasörleri ---
+# Bu klasörler her "Build" dediğinde yeniden oluşturulur, depoda yer kaplamamalıdır.
 Debug/
 Release/
-.settings/
+build/
+bin/
+Objects/
+
+# --- 2. Ara Derleme Dosyaları (Object Files) ---
+# .c dosyalarının makine diline çevrilmiş ara halleridir.
+*.o
+*.obj
+*.d
+*.su
+*.list
+*.map
+*.lck
+
+# --- 3. Nihai Çıktı Dosyaları (Executable) ---
+# Karta yüklenen dosyalar. Bunları kaynak koddan istediğimiz an üretebiliriz.
 *.elf
 *.bin
 *.hex
-*.map
-*.o
-*.su
-*.list
+*.axf
+
+# --- 4. Yedek ve Geçici Dosyalar ---
+# IDE'nin veya senin oluşturduğun geçici yedekler.
+*.bak
+*.tmp
+*.swp
+*~
+
+# --- 5. IDE Ayar Klasörleri (Tercihe Bağlı) ---
+# Sadece senin bilgisayarındaki pencere ayarları vb. içerir.
+.settings/
+.metadata/
 *.launch
+
+# --- 6. İşletim Sistemi Dosyaları ---
+.DS_Store
+Thumbs.db
